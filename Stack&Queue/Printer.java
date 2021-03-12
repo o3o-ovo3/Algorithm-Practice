@@ -12,18 +12,18 @@ class Solution {
 		int order = 1;
 		int size = 0;
         
-        // ¹®¼­µéÀ» waiting¿¡ ³ÖÀ½
+        // ë¬¸ì„œë“¤ì„ waitingì— ë„£ìŒ
         for (int i = 0; i < priorities.length; i++) {
 			waiting.add(new Document(priorities[i], i, 0));
 		}
         
         while(true){
             size = waiting.size();
-            if (size == 0) { // Á¾·á Á¶°Ç : waiting¿¡ ¾Æ¹«°Íµµ ¾øÀ» ¶§
+            if (size == 0) { // ì¢…ë£Œ ì¡°ê±´ : waitingì— ì•„ë¬´ê²ƒë„ ì—†ì„ ë•Œ
 				break;
 			}
             
-            for (int i = 0; i < size; i++) { // ¿ì¼±¼øÀ§°¡ °¡Àå ³ôÀº ¹®¼­ Ã£±â
+            for (int i = 0; i < size; i++) { // ìš°ì„ ìˆœìœ„ê°€ ê°€ì¥ ë†’ì€ ë¬¸ì„œ ì°¾ê¸°
 				Document doc = waiting.poll();
 
 				if (max == 0)
@@ -33,7 +33,7 @@ class Solution {
 				waiting.add(doc);
 			}
             
-            for (int i = 0; i < size; i++) { // °¡Àå ³ôÀº ¿ì¼±¼øÀ§ÀÎ ¹®¼­¸¦ waiting Å¥¿¡¼­ »©¼­ task¿¡ ÀúÀå
+            for (int i = 0; i < size; i++) { // ê°€ì¥ ë†’ì€ ìš°ì„ ìˆœìœ„ì¸ ë¬¸ì„œë¥¼ waiting íì—ì„œ ë¹¼ì„œ taskì— ì €ì¥
 				Document doc = waiting.poll();
 				if (doc.priority == max) {
 					doc.out_order = order;
@@ -47,7 +47,7 @@ class Solution {
 			}
         }
         
-        for(Document doc : task){ // locationÀ¸·Î ÁÖ¾îÁø ÀÚ¸®¿¡ ÀÖ´Â ¹®¼­°¡ ¸î¹øÂ°·Î Ãâ·ÂµÇ´ÂÁö ²¨³»¿À±â
+        for(Document doc : task){ // locationìœ¼ë¡œ ì£¼ì–´ì§„ ìë¦¬ì— ìˆëŠ” ë¬¸ì„œê°€ ëª‡ë²ˆì§¸ë¡œ ì¶œë ¥ë˜ëŠ”ì§€ êº¼ë‚´ì˜¤ê¸°
             if(doc.in_order == location){
                 answer = doc.out_order;
             }
