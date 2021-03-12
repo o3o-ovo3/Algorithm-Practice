@@ -10,7 +10,7 @@ class Solution {
 		bridge.add(new Truck(truck_weights[0], 0));
         
         while(true) {
-			// Á¾·á Á¶°Ç
+			// ÃÂ¾Â·Ã¡ ÃÂ¶Â°Ã‡
 			if(bridge.size() == 0) {
 				break;
 			}
