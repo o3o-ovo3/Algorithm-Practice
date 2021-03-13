@@ -21,4 +21,4 @@
 <br/>
 
 #### 3. 완전 탐색
-- [모의고사(./Exhaustive Search/PracticeTest.java)
+- [모의고사](./Exhaustive Search/PracticeTest.java)
