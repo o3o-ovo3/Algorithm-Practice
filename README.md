@@ -17,3 +17,8 @@
 - [K번째수](./Sort/KthNumber.java)
 - [가장 큰 수](./Sort/BiggestNumber.java)
 - [H-Index](./Sort/HIndex.java)
+
+<br/>
+
+#### 3. 완전 탐색
+- [모의고사(./Exhaustive Search/PracticeTest.java)
