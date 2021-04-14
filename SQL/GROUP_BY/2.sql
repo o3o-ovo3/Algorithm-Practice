@@ -1,0 +1,7 @@
+-- 동명 동물 수 찾기
+-- 중복의 개수와 각각의 값 구하기
+SELECT NAME, COUNT(name) COUNT
+FROM ANIMAL_INS
+GROUP BY NAME
+HAVING COUNT(NAME) > 1
+ORDER BY NAME ASC;
