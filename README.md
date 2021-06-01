@@ -22,4 +22,12 @@
 
 #### 3. 완전 탐색
 - [모의고사](./ExhaustiveSearch/PracticeTest.java)
+- [카펫](./ExhaustiveSearch/Carpet.java)
+
+<br/>
+
+#### 4. 해시
+- [완주하지 못한 선수](./Hash/Player.java)
+- [전화번호 목록](./Hash/Phone_book.java)
+- [위장](./Hash/Camouflage.java)
 
