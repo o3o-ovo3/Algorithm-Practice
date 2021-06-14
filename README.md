@@ -37,3 +37,9 @@
 
 #### 5. DFS와 BFS
 - [로봇](./DFS&BFS/Robot.java)
+
+<br/>
+
+<hr>
+#### Level2
+- [가장 큰 정사각형 찾기](./Level2/BiggestSquare.java)
