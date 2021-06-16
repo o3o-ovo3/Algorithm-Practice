@@ -43,7 +43,7 @@
 <hr>
 
 #### Level1
--[가운데 글자](./level1/Center.java)
+- [가운데 글자](./level1/Center.java)
 
 <br/>
 
