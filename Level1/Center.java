@@ -1,4 +1,4 @@
-// 프로그래머스 레벨1 가운데 글자
+// 프로그래머스 레벨1 가운데 글자 가져오기
 
 class Solution {
     public String solution(String s) {
