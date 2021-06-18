@@ -11,6 +11,7 @@
 - [주식가격](./Stack&Queue/StockPrice.java)
 - [기능개발](./Stack&Queue/FunctionDevelop.java)
 - [프린터](./Stack&Queue/Printer.java)
+- [스택](./Stack&Queue/PrintStack.java)
 
 <br/>
 
