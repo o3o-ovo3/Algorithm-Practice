@@ -14,6 +14,7 @@
 - [스택](./Stack&Queue/PrintStack.java)
 - [제로](./Stack&Queue/Zero.java)
 - [괄호](./Stack&Queue/Parenthesis.java)
+- [스택 수열](./Stack&Queue/Sequence.java)
 
 <br/>
 
