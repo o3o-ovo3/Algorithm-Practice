@@ -15,6 +15,7 @@
 - [제로](./Stack&Queue/Zero.java)
 - [괄호](./Stack&Queue/Parenthesis.java)
 - [스택 수열](./Stack&Queue/Sequence.java)
+- [오큰수](./Stack&Queue/NGE.java)
 
 <br/>
 
