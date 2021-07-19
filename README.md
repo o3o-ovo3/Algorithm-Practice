@@ -16,6 +16,8 @@
 - [괄호](./Stack&Queue/Parenthesis.java)
 - [스택 수열](./Stack&Queue/Sequence.java)
 - [오큰수](./Stack&Queue/NGE.java)
+- [카드](./Stack&Queue/Card.java)
+- [요세푸스 문제 0](./Stack&Queue/Josephus.java)
 
 <br/>
 
