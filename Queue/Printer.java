@@ -1,3 +1,5 @@
+// 프로그래머스 스택 & 큐 - 프린터
+
 package stack_queue;
 import java.util.*;
 
