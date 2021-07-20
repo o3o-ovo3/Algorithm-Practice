@@ -24,6 +24,7 @@
 - [카드](./Queue/Card.java)
 - [요세푸스 문제 0](./Queue/Josephus.java)
 - [프린터 큐](./Queue/PrinterQueue.java)
+- [덱](./Queue/Deque.java)
 
 <br/>
 
