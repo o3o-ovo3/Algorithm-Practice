@@ -56,7 +56,8 @@
 
 #### 7. Greedy
 - [체육복](./Greedy/SportsWear.java)
-
+- [동전 0](./Greedy/Coin.java)
+- [ATM](./Greedy/ATM.java)
 
 <br/>
 
