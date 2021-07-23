@@ -1,5 +1,5 @@
 // 백준 알고리즘 큐 - AC 
-// 틀림 ! ㅠㅠㅠ 왜 지 ? , ,
+// 큐 완성
 
 package baekjoon.queue;
 
@@ -33,7 +33,7 @@ public class AC {
                 if(func.contains("D"))
                     sb.append("error\n");
                 else
-                    sb.append("[]");
+                    sb.append("[\n]"); // 개행문자 추가 안해서 틀림
 
                 T--;
                 continue;
