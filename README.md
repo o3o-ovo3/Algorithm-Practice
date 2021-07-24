@@ -65,6 +65,7 @@
 
 #### 8. 수학
 - [손익분기점](./Math/BEPoint.java)
+- [부녀회장이 될테야](./Math/APT.java)
 
 <br/>
 
