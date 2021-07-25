@@ -69,6 +69,12 @@
 
 <br/>
 
+#### 9. 재귀
+- [팩토리얼](./Recursion/Factorial.java)
+- [피보나치 수 5](./Recursion/Fibo.java)
+
+<br/>
+
 <hr>
 
 #### Level1
