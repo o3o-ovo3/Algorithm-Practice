@@ -93,3 +93,6 @@
 - [프린터](./Level2/Printer2.java)
 - [영어 끝말잇기](./Level2/WordChain.java)
 - [파일명 정렬](./Level2/FileName.java)
+- [스킬트리](SkillTree.java)
+- [더 맵게](MoreSpicy.java)
+- [124 나라의 숫자](NumberOf124.java)
