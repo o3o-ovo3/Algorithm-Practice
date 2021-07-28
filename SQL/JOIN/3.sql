@@ -1,0 +1,11 @@
+-- 오랜 기간 보호한 동물
+-- 상위 3개를 뽑기 전에 (rownum <= 3) datetime을 기준으로 정렬을 해주었어야 함
+-- 서브쿼리 이용
+SELECT NAME, DATETIME
+FROM (
+    SELECT I.NAME, I.DATETIME
+    FROM ANIMAL_INS I FULL OUTER JOIN ANIMAL_OUTS O ON I.ANIMAL_ID = O.ANIMAL_ID
+    WHERE O.DATETIME IS NULL
+    ORDER BY I.DATETIME ASC
+)
+WHERE ROWNUM <= 3;
