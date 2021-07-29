@@ -31,7 +31,7 @@
 <br/>
 
 - [최대 힙](./Queue/PriorityQueue/MaxHeap.java)
-- [절댓값 힙(./Queue/PriorityQueue/AbsHeap.java)
+- [절댓값 힙](./Queue/PriorityQueue/AbsHeap.java)
 
 <br/>
 
