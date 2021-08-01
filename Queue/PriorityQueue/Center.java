@@ -1,45 +1,39 @@
 // 백준 알고리즘 우선순위 큐 - 가운데를 말해요
-// 시간 초과 2
+// 최대 힙과 최소 힙을 이용하여 가운데 값 찾기
 
 package baekjoon.queue;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Center {
-    public static void main(String[] args) throws Exception{
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-     
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder()); // 작은 수들 모음을 큰 순서대로 저장
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(); // 큰 수들 모음을 작은 순서대로 저장
+
         while(N > 0){
-            pq.add(sc.nextInt());
-            PriorityQueue<Integer> copy = new PriorityQueue<>();
-            copy.addAll(pq);
-            int size = pq.size();
-            int t;
-            if(size == 1)
-                t = pq.peek();
+            if(maxHeap.size() == minHeap.size())
+                maxHeap.add(Integer.parseInt(br.readLine()));
 
-            else if(size % 2 == 0)
-                t = poll(copy, size / 2, 0);
+            else{
+                minHeap.add(maxHeap.poll());
+                maxHeap.add(Integer.parseInt(br.readLine()));
+            }
 
-            else
-                t = poll(copy, size / 2 + 1, 0);
-
-            sb.append(t + "\n");
+            if(!minHeap.isEmpty() && maxHeap.peek() > minHeap.peek()) { // maxHeap(작은 수들) 중 가장 큰 수가 minHeap(큰 수들) 중 가장 작은 수 보다 크면 swap
+                minHeap.add(maxHeap.poll());
+                maxHeap.add(minHeap.poll());
+            }
+            sb.append(maxHeap.peek() + "\n");
             N--;
         }
-        System.out.println(sb);
-    }
 
-    public static int poll(PriorityQueue<Integer> pq, int cnt, int result){
-        if(cnt != 0){
-            int temp = pq.poll();
-            result = poll(pq, --cnt, temp);
-        }
-        return result;
+        System.out.println(sb);
     }
 }
 
