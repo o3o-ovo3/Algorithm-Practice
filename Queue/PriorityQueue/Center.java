@@ -1,30 +1,45 @@
 // 백준 알고리즘 우선순위 큐 - 가운데를 말해요
-// 시간 초과
+// 시간 초과 2
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+package baekjoon.queue;
 
-public class Main {
+import java.util.*;
+
+public class Center {
     public static void main(String[] args) throws Exception{
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
         int N = sc.nextInt();
 
-        List<Integer> list = new ArrayList<>();
-
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+     
         while(N > 0){
-            list.add(sc.nextInt());
-            Collections.sort(list);
-            int size = list.size();
-            if(size % 2 == 0)
-                sb.append(list.get(size / 2 - 1) + "\n");
+            pq.add(sc.nextInt());
+            PriorityQueue<Integer> copy = new PriorityQueue<>();
+            copy.addAll(pq);
+            int size = pq.size();
+            int t;
+            if(size == 1)
+                t = pq.peek();
+
+            else if(size % 2 == 0)
+                t = poll(copy, size / 2, 0);
 
             else
-                sb.append(list.get(size / 2) + "\n");
+                t = poll(copy, size / 2 + 1, 0);
+
+            sb.append(t + "\n");
             N--;
         }
         System.out.println(sb);
     }
+
+    public static int poll(PriorityQueue<Integer> pq, int cnt, int result){
+        if(cnt != 0){
+            int temp = pq.poll();
+            result = poll(pq, --cnt, temp);
+        }
+        return result;
+    }
 }
+
