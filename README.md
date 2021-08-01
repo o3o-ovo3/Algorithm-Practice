@@ -32,6 +32,7 @@
 
 - [최대 힙](./Queue/PriorityQueue/MaxHeap.java)
 - [절댓값 힙](./Queue/PriorityQueue/AbsHeap.java)
+- [가운데를 말해요](./Queue/PriorityQueue/Center.java)
 
 <br/>
 
