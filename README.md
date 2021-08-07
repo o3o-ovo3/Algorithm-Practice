@@ -67,6 +67,7 @@
 - [체육복](./Greedy/SportsWear.java)
 - [동전 0](./Greedy/Coin.java)
 - [ATM](./Greedy/ATM.java)
+- [큰 수 만들기](./Greedy/MaxNumber.java)
 
 <br/>
 
