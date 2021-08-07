@@ -1,45 +1,30 @@
 // 프로그래머스 Level2 - 큰 수 만들기 (그리디 문제)
-// 테스트케이스 통과, 채점 실패 코드
-
+import java.util.*;
 class Solution {
     public String solution(String number, int k) {
-        String answer = "";
-        int size = number.length() - k; // 남겨야하는 숫자의 개수
-        int cnt = 0; // 제거한 숫자 개수
+        StringBuilder sb = new StringBuilder(); // 시간 절약을 위해 StringBuilder 사용
+        int cnt = number.length() - k; // 남겨야하는 숫자의 개수
 
-        char[] toChar = number.toCharArray();
         int max = -1;
         int idx = 0;
 
-        while(idx < k){
-            if(Character.getNumericValue(toChar[idx]) == 9)
-                break;
-            if(Character.getNumericValue(toChar[idx]) > max && toChar.length - idx >= size) {
-                max = Character.getNumericValue(toChar[idx]);
-                cnt = idx; // idx 이전의 모든 숫자들을 제거
-            }
-            idx ++;
-        }
+        int left = 0;
+        int right = number.length() - cnt;
 
-        idx = cnt; // max 값 부터 조사
-
-        while(idx < toChar.length){
-            if(cnt >= k) { // 더 이상 제거할 수 없다면 모두 answer에 저장
-                while(idx < toChar.length){
-                    answer += Character.getNumericValue(toChar[idx]);
-                    idx++;
+        while(cnt > 0){
+            max = -1;
+            for(int j = left; j <= right; ++j){
+                int num = number.charAt(j) - '0'; // 아스키코드 숫자는 48부터 시작하므로 숫자값을 얻고 싶으면 48을 빼주면 된다. ('0'가 48)
+                if(num > max){
+                    idx = j;
+                    max = num;
                 }
-                break;
             }
-            
-            if(Character.getNumericValue(toChar[idx]) >= Character.getNumericValue(toChar[idx + 1]))
-                answer += Character.getNumericValue(toChar[idx]);
-
-            else cnt ++;
-
-            idx++;
+            sb.append(number.charAt(idx));
+            left = idx + 1;
+            right = number.length() - --cnt;
         }
         
-        return answer;
+        return sb.toString();
     }
 }
