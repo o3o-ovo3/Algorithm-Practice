@@ -1,4 +1,4 @@
-// 프로그래머스 Level2 - 큰 수 만들기 (그리디 문제)
+// 프로그래머스 그리디 - 큰 수 만들기
 import java.util.*;
 class Solution {
     public String solution(String number, int k) {
