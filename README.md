@@ -101,6 +101,7 @@
 - [더 맵게](./Level2/MoreSpicy.java)
 - [124 나라의 숫자](./Level2/NumberOf124.java)
 - [짝지어 제거하기](./Level2/RemovePair.java)
+- [문자열 압축](./Level2/Compression.java)
 
 <br/>
 
