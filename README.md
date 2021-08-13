@@ -46,6 +46,7 @@
 #### 4. 완전 탐색
 - [모의고사](./ExhaustiveSearch/PracticeTest.java)
 - [카펫](./ExhaustiveSearch/Carpet.java)
+- [블랙잭](./ExhaustiveSearch/Blackjack.java)
 
 <br/>
 
