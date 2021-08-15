@@ -1,79 +1,41 @@
 // 백준 알고리즘 브루트포스 - 덩치
-// 실패한 코드
 
 package baekjoon.brute;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
-class Person{
-    int height;
-    int weight;
-    int rank;
-
-    public Person(int height, int weight, int rank){
-        this.height = height;
-        this.weight = weight;
-        this.rank = rank;
-    }
-}
 
 public class Bulk {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
 
-        StringTokenizer st;
-        Person[] people = new Person[N];
-        Person max = null;
-        int idx = 0;
-        for(int i = 0; i < N; i++){
-            st = new StringTokenizer(br.readLine(), " ");
-            if(i == 0){
-                people[i] = new Person(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), 1);
-                max = people[i];
-            }
+        String[] str;
+        int i;
+        int j;
+        int[][] arr = new int[N][2]; // 2차원 배열
+        for(i = 0; i < N; i++){ // 배열에 키, 몸무게 저장
+            str = br.readLine().split(" ");
+            arr[i][0] = Integer.parseInt(str[0]);
+            arr[i][1] = Integer.parseInt(str[1]);
+        }
 
-            else{
-                Person person = new Person(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), 0);
-                if(person.height > max.height && person.weight > max.weight){
-                    person.rank = 1;
-                    max = person;
-                    people[i] = person;
+        for(i = 0; i < N; i++){ // 한명씩 모두와 비교
+            int rank = 1;
+            for(j = 0; j < N; j++){
+                if(i == j) // 같은 사람 끼리는 비교하지 않음
+                    continue;
 
-                    while(idx < i){
-                        people[idx].rank += 1;
-                        idx++;
-                    }
-                } else {
-                    while(idx < i){
-                        if(people[idx].height > person.height && people[idx].weight > person.weight) {
-                            idx++;
-                            if(idx == i){
-                                person.rank = i + 1;
-                                people[i] = person;
-                            }
-                            continue;
-                        } else{
-                            person.rank = people[idx].rank;
-                            people[i] = person;
-                            int index = 0;
-                            while(index < i){
-                                if(people[index].rank > person.rank){
-                                    people[index].rank ++;
-                                }
-                                index++;
-                            }
-                            break;
-                        }
-                    }
+                if(arr[i][0] < arr[j][0] && arr[i][1] < arr[j][1]){ // 본인보다 키와 몸무게가 클 때에만 등수를 낮춘다
+                    rank++;
                 }
-                idx = 0;
+                // 본인보다 키와 몸무게가 큰 사람이 없을 경우 그대로 리턴하니까 순위는 1
             }
+            sb.append(rank + " ");
         }
-        for(Person p : people){
-            System.out.print(p.rank + " ");
-        }
+
+        System.out.println(sb);
     }
 }
+
