@@ -48,6 +48,7 @@
 - [카펫](./ExhaustiveSearch/Carpet.java)
 - [블랙잭](./ExhaustiveSearch/Blackjack.java)
 - [분해합](./ExhaustiveSearch/Decom.java)
+- [덩치](./ExhaustiveSearch/Bulk.java)
 
 <br/>
 
