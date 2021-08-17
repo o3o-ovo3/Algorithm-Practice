@@ -62,7 +62,8 @@
 
 #### 6. DFS와 BFS
 - [로봇](./DFS&BFS/Robot.java)
-- [네트워크](./DFS&BFS/Network.java) 🔥
+- [네트워크](./DFS&BFS/Network.java)
+- [트리의 부모 찾기](./DFS&BFS/Parent.java)
 
 <br/>
 
