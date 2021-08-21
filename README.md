@@ -106,6 +106,9 @@
 - [124 나라의 숫자](./Level2/NumberOf124.java)
 - [짝지어 제거하기](./Level2/RemovePair.java)
 - [문자열 압축](./Level2/Compression.java)
+- [최댓값과 최솟값](./Level2/MinMax.java)
+- [괄호](./Level2/Bracket2.java)
+- [최솟값 만들기](./Level2/Minimum.java)
 
 <br/>
 
