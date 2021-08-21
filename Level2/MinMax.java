@@ -1,4 +1,4 @@
-// 프로그래머스 Level2 - 최소값과 최대값
+// 프로그래머스 Level2 - 최댓값과 최솟값
 
 // 1. Math를 이용하여 min, max 구하기
 import java.util.StringTokenizer;
