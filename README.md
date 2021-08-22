@@ -109,6 +109,8 @@
 - [최댓값과 최솟값](./Level2/MinMax.java)
 - [올바른 괄호](./Level2/Bracket2.java)
 - [최솟값 만들기](./Level2/Minimum.java)
+- [N개의 최소공배수](./Level2/LCM.java)
+- [다음 큰 숫자](./Level2/NextN.java)
 
 <br/>
 
