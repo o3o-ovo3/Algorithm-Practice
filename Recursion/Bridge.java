@@ -1,58 +1,54 @@
 // 구름LEVEL - 다리 건너기
-// 테스트 케이스 통과, 제출 실패 코드
 
 import java.io.*;
 import java.util.*;
-class Main {
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
 
-        List<Integer> list = new ArrayList<>();
+class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        int[] array = new int[N];
+
         for (int i = 0; i < N; i++) {
-            list.add(Integer.parseInt(br.readLine()));
+            array[i] = Integer.parseInt(br.readLine());
         }
 
-        Collections.sort(list);
+        Arrays.sort(array);
+
         int cnt = 0;
-        List<Integer> helper = new ArrayList<>();
-        cnt = escape(list, helper, cnt);
+        int slowestIdx = N - 1;
+        cnt = escape(array, slowestIdx, cnt);
 
         System.out.println(cnt);
-	}
+    }
 
-    public static int escape(List<Integer> waiting, List<Integer> helper, int cnt) {
-        if(helper.isEmpty()) {
-            if(waiting.size() <= 3){
-                // 종료 조건 (가장 빠른 사람이 3명 이하 남았을 때)
-                cnt += waiting.remove(waiting.size() - 1); // 가장 느린 애 속도 만큼 걸림
-                if(waiting.size() == 1) { return cnt;}
-                else {
-                    cnt += waiting.get(0); // 가장 빠른애가 돌아옴
-                    cnt += waiting.get(1); // 둘 중 느린 사람 속도 만큼 시간 걸림
-                    return cnt;
-                }
-            }
-            else {
-                int h1 = waiting.remove(0);
-                int h2 = waiting.remove(0);
+    // 가장 작은 애들을 보냄
+    // 한명이 돌아옴
+    // 가장 큰 애들을 보냄
+    // 한명이 돌아옴
+    // 가장 큰 애들을 보냄
 
-                cnt += h2;
+    public static int escape(int[] array, int slowestIdx, int cnt) {
+//        // 종료 조건 --> 아무도 남지 않았을 때
+//        if(slowestIdx == 0) return cnt;
 
-                helper.add(h1);
-                helper.add(h2);
-            }
+        // 3명 이하로 남았을 때
+        if(slowestIdx == 2) {
+            cnt += backPair(array) + array[slowestIdx];
+            return cnt;
+        } else if(slowestIdx == 1){
+            cnt += array[1];
+            return cnt;
         } else {
-            // 가장 느린 두 사람을 보냄
-            cnt += waiting.remove(waiting.size() - 1);
-            waiting.remove(waiting.size() - 1);
+            int case1 = backPair(array) + array[slowestIdx] + array[1];
+            int case2 = array[slowestIdx] + array[slowestIdx - 1] + array[0] + array[0];
+
+            cnt += Math.min(case1, case2);
+            return escape(array, slowestIdx - 2, cnt);
         }
+    }
 
-        int h = helper.remove(0);
-        cnt+= h; // 빠른 애가 돌아옴
-        waiting.add(h);
-
-        Collections.sort(waiting);
-        return escape(waiting, helper, cnt);
+    public static int backPair(int[] array){
+        return array[0] + array[1];
     }
 }
