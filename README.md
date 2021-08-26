@@ -92,7 +92,7 @@
 <hr>
 
 #### Level1
-- [가운데 글자 가져오기](./level1/Center.java)
+- [가운데 글자 가져오기](./evel1/Center.java)
 - [같은 숫자는 싫어](./Level1/NotSameNum.java)
 
 <br/>
