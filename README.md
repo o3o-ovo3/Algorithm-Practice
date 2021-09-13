@@ -94,6 +94,7 @@
 #### Level1
 - [가운데 글자 가져오기](./evel1/Center.java)
 - [같은 숫자는 싫어](./Level1/NotSameNum.java)
+- [문자열 다루기](./Level1/DealingStr.java)
 
 <br/>
 
