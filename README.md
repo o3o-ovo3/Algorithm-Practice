@@ -96,6 +96,7 @@
 - [같은 숫자는 싫어](./Level1/NotSameNum.java)
 - [문자열 다루기](./Level1/DealingStr.java)
 - [나누어 떨어지는 숫자 배열](./Level1/DivisorArr.java)
+- [로또의 최고 순위와 최저 순위](./Level1/Lottos.java)
 
 <br/>
 
