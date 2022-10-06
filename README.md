@@ -117,6 +117,7 @@
 - [최솟값 만들기](./Level2/Minimum.java)
 - [N개의 최소공배수](./Level2/LCM.java)
 - [다음 큰 숫자](./Level2/NextN.java)
+- [카카오프렌즈 컬러링북](./Level2/ColoringBook.java)
 
 <br/>
 
