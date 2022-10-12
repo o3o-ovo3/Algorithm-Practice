@@ -119,6 +119,7 @@
 - [다음 큰 숫자](./Level2/NextN.java)
 - [카카오프렌즈 컬러링북](./Level2/ColoringBook.java)
 - [JadenCase](./Level2/JadenCase.java)
+- [이진변환 반복하기](./Level2/Binary.java)
 
 <br/>
 
