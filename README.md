@@ -120,6 +120,7 @@
 - [카카오프렌즈 컬러링북](./Level2/ColoringBook.java)
 - [JadenCase](./Level2/JadenCase.java)
 - [이진변환 반복하기](./Level2/Binary.java)
+- [숫자의 표현](./Level2/ExpressionOfNum.java)
 
 <br/>
 
