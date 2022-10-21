@@ -49,6 +49,7 @@
 - [블랙잭](./ExhaustiveSearch/Blackjack.java)
 - [분해합](./ExhaustiveSearch/Decom.java)
 - [덩치](./ExhaustiveSearch/Bulk.java)
+- [모음사전](./Level2/VowelDict.java)
 
 <br/>
 
